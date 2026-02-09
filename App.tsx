@@ -334,6 +334,48 @@ const App: React.FC = () => {
         <div className="space-y-6">
           <section className="bg-gray-50 p-4 rounded-2xl border border-gray-100 shadow-sm">
             <h3 className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-4">
+              Quotation Details
+            </h3>
+            <div className="grid grid-cols-2 gap-4">
+              <div>
+                <label className="block text-[10px] font-bold text-gray-600 uppercase mb-1">
+                  Quotation Number
+                </label>
+                <input
+                  type="text"
+                  value={data.quotationNo}
+                  onChange={(e) =>
+                    setData((prev) => ({
+                      ...prev,
+                      quotationNo: e.target.value,
+                    }))
+                  }
+                  className="w-full rounded-xl border-gray-200 sm:text-sm p-3 bg-white focus:ring-2 focus:ring-green-500 outline-none transition-all"
+                  placeholder="ASS/2024/XXX"
+                />
+              </div>
+              <div>
+                <label className="block text-[10px] font-bold text-gray-600 uppercase mb-1">
+                  Date
+                </label>
+                <input
+                  type="text"
+                  value={data.date}
+                  onChange={(e) =>
+                    setData((prev) => ({
+                      ...prev,
+                      date: e.target.value,
+                    }))
+                  }
+                  className="w-full rounded-xl border-gray-200 sm:text-sm p-3 bg-white focus:ring-2 focus:ring-green-500 outline-none transition-all"
+                  placeholder="DD/MM/YYYY"
+                />
+              </div>
+            </div>
+          </section>
+
+          <section className="bg-gray-50 p-4 rounded-2xl border border-gray-100 shadow-sm">
+            <h3 className="text-[10px] font-black text-gray-400 uppercase tracking-widest mb-4">
               Client Information
             </h3>
             <div className="space-y-4">
