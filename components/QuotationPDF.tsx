@@ -30,7 +30,7 @@ const PageWrapper: React.FC<{ children: React.ReactNode; isLast?: boolean }> = (
         <div className="flex items-center gap-4">
           <div className="w-20 h-20 bg-white shadow-md rounded-2xl flex items-center justify-center p-2 border border-gray-100 overflow-hidden bg-white">
               <img 
-                src="logo.png" 
+                src={`${import.meta.env.BASE_URL}logo.png`} 
                 alt="Aashika Solar Logo" 
                 className="block w-full h-full object-contain"
                 style={{ minWidth: '40px', minHeight: '40px' }}
